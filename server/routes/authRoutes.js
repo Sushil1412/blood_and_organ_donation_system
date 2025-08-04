@@ -89,11 +89,11 @@ router.get('/hospitalorganrequests', protect, authorize('hospital'), hospitalorg
 router.patch('/hospitalrequestsubmit', protect, authorize('hospital'), hospitalrequestsubmit);
 router.get('/hospitalmypledge', protect, authorize('hospital'), hospitalmypledge);
 router.patch('/updatedonorstatus/:donorId', protect, authorize('hospital'), updatedonorstatus);
-
+router.post('/bloodRequestDonor', protect, authorize('donor'), bloodRequestDonor);
 // -------------------- Donor Routes --------------------
 router.post('/pledges', protect, authorize('donor'), pledges);
 router.get('/mypledge', protect, authorize('donor'), mypledge);
-router.post('/bloodRequestDonor', protect, authorize('donor'), bloodRequestDonor);
+
 router.get('/bloodrequestfordonor', protect, authorize('donor'), bloodrequestfordonor);
 router.patch('/upadateBloodrequestdonor', protect, authorize('donor'), upadateBloodrequestdonor);
 router.get('/mypledgetype', protect, authorize('donor'), mypledgetype);
